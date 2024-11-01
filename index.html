@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raj Varshith Reddy MalgiReddy - Portfolio</title>
+    <meta name="description" content="Portfolio of Raj Varshith Reddy MalgiReddy - Data Science Student at University of Missouri-Kansas City, specializing in AI, IoT systems, and data analytics.">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header role="banner">
+        <div class="header-content">
+            <img src="Images/profile photo.jpeg" alt="Raj Varshith Reddy MalgiReddy" class="profile-img" loading="lazy">
+            <h1>Raj Varshith Reddy MalgiReddy</h1>
+            <p>Data Science Student | University of Missouri-Kansas City</p>    
+            <nav role="navigation" aria-label="Main navigation">
+                <a href="#about" class="nav-button" aria-current="page">About</a>
+                <a href="#projects" class="nav-button">Projects</a>
+                <a href="#skills" class="nav-button">Skills</a>
+                <a href="#resources" class="nav-button">Resources</a>
+                
+            </nav>
+        
+        </div>
+    </header>
+
+    <main role="main">
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About Me</h2>
+            <p>As a data science student at the University of Missouri-Kansas City, I am focused on AI, secure IoT systems, and data analytics. My projects span deep learning models for emotion detection, secure data transmission with ESP32, and insightful visualizations with tools like Tableau, showcasing my commitment to impactful, data-driven innovation.</p>
+        </section>
+
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
+
+            <div class="project">
+                <h3>Basic Environmental Monitoring System <i class="fas fa-thermometer-half" aria-hidden="true"></i></h3>
+                <p>Developed a real-time temperature and humidity monitoring system using ESP32 and DHT11, with LED indicators and a customizable user interface through a serial monitor.</p>
+                
+                <button onclick="toggleDetails('env-monitoring-system')" 
+                        class="styled-button"
+                        aria-expanded="false"
+                        aria-controls="env-monitoring-system">
+                    <span>More Details</span>
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </button>
+                
+                <div id="env-monitoring-system" class="project-details">
+                    <p><strong>Description:</strong> Monitors temperature and humidity in real-time and uses an LED to indicate levels based on custom thresholds. Users interact with the system to adjust thresholds and control monitoring status.</p>
+                    <p><strong>Components:</strong> ESP32 Microcontroller, DHT11 Sensor, Jumper Wires.</p>
+                    <p><strong>System Features:</strong></p>
+                    <ul>
+                        <p><strong>Temperature and Humidity Monitoring:</strong> Reads data every 2 seconds and displays it on a serial monitor.</p>
+                        <p><strong>LED Indicator:</strong> Visual LED indication for levels above or below set thresholds.</p>
+                        <p><strong>User Interface:</strong> Allows start/stop commands and threshold adjustments via a serial monitor.</p>
+                    </ul>
+                    <p><strong>Technologies Used:</strong> ESP32, DHT11 Sensor, Serial Communication, C++.</p>
+                    <p><strong>Outcome:</strong> Real-time environment monitoring system with user-defined thresholds for interactive control and customizable alerts.</p>
+                </div>
+            </div>
+        <div class="project">
+    <h3>Data Upload Using Bluetooth <i class="fab fa-bluetooth-b"></i></h3>
+    <p>Implemented BLE communication on ESP32 to broadcast temperature, humidity, and battery level data for real-time mobile access.</p>
+    <button onclick="toggleDetails('bluetooth-data-project')" class="styled-button">
+        <span>More Details</span>
+        <i class="fas fa-chevron-right"></i>
+    </button>
+    <div id="bluetooth-data-project" class="project-details">
+        <p><strong>Description:</strong> Reads temperature and humidity data from DHT11, then broadcasts via BLE with battery level simulation.</p>
+        <p><strong>Technologies Used:</strong> ESP32, BLE, DHT11 Sensor, BLE debugging app (nRF Connect).</p>
+        <p><strong>Outcome:</strong> Provides real-time sensor data and battery notifications over BLE to a mobile application.</p>
+    </div>
+</div>
+
+        <div class="project">
+            <h3>Cloud Data Upload Using WiFi <i class="fas fa-cloud-upload-alt"></i></h3>
+            <p>Used ESP32 and Flask to transmit real-time sensor data over WiFi for centralized monitoring and display.</p>
+            <button onclick="toggleDetails('cloud-data-project')" class="styled-button">
+                <span>More Details</span>
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div id="cloud-data-project" class="project-details">
+                <p><strong>Description:</strong> The ESP32 microcontroller reads temperature and humidity from a DHT11 sensor, formats it as JSON, and sends it to a Flask server using HTTP POST.</p>
+                <p><strong>Technologies Used:</strong> ESP32, Flask, WiFi Communication, JSON Handling, HTTP POST Requests, DHT11 Sensor.</p>
+                <p><strong>Outcome:</strong> Enables real-time data collection and monitoring over WiFi, with server-side data display.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <h3>Medical Insurance Cost Analysis and Prediction <i class="fas fa-heartbeat"></i></h3>
+            <p>Comprehensive analysis of medical insurance cost drivers to provide insights for healthcare planning and policies.</p>
+            <button onclick="toggleDetails('insurance-analysis')" class="styled-button">
+                <span>More Details</span>
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div id="insurance-analysis" class="project-details">
+                <p><strong>Description:</strong> Analysis of factors influencing medical insurance costs, focusing on demographics and lifestyle variables.</p>
+                <p><strong>Technologies Used:</strong> Python (Pandas, Scikit-Learn, Statsmodels), Multiple Regression Analysis, Data Visualization.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <h3>Advertising Sales Prediction Using Linear Regression <i class="fas fa-chart-line"></i></h3>
+            <p>Built a linear regression model to predict sales based on advertising budgets in TV, radio, and newspapers.</p>
+            <button onclick="toggleDetails('advertising-project')" class="styled-button">
+                <span>More Details</span>
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div id="advertising-project" class="project-details">
+                <p><strong>Description:</strong> This project analyzes advertising budget data to predict sales, showing TV ads as the primary cost driver.</p>
+                <p><strong>Technologies Used:</strong> Python (Pandas, Scikit-Learn), Linear Regression, Seaborn, Matplotlib.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <h3>Text Classification and Sentiment Analysis with Neural Networks <i class="fas fa-comments"></i></h3>
+            <p>Developed sentiment analysis and text classification models using deep learning for IMDb and 20 Newsgroups datasets.</p>
+            <button onclick="toggleDetails('text-classification-project')" class="styled-button">
+                <span>More Details</span>
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div id="text-classification-project" class="project-details">
+                <p><strong>Description:</strong> This project includes sentiment analysis on IMDb reviews and news topic classification for the 20 Newsgroups dataset using LSTM and dense layers.</p>
+                <p><strong>Technologies Used:</strong> Python (Keras, TensorFlow, Scikit-Learn), NLP libraries (NLTK), text preprocessing, neural networks (LSTM, dense layers).</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <h3>Emotion Detection Using MobileNetV2 <i class="fas fa-smile"></i></h3>
+            <p>Developed an emotion detection model using MobileNetV2 architecture, trained on facial expression data to classify emotions.</p>
+            <button onclick="toggleDetails('emotion-detection-project')" class="styled-button">
+                <span>More Details</span>
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div id="emotion-detection-project" class="project-details">
+                <p><strong>Description:</strong> Implemented an emotion detection model with transfer learning using MobileNetV2. Fine-tuned on a facial expression dataset with various optimization strategies like early stopping, learning rate reduction, and batch normalization.</p>
+                <p><strong>Technologies Used:</strong> TensorFlow, Keras, Python, MobileNetV2, ImageDataGenerator, classification report, confusion matrix, Matplotlib, Seaborn.</p>
+                <p><strong>Skills Demonstrated:</strong> Transfer learning, fine-tuning, model evaluation with confusion matrices, and plotting results.</p>
+                <p><strong>Outcome:</strong> Achieved improved emotion classification accuracy and visualization of model performance through a confusion matrix and classification report.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <h3>Data Visualization Project <i class="fas fa-chart-bar"></i></h3>
+            <p>Developed interactive dashboards with Tableau, Power BI, and custom Python visuals for trend exploration and analysis.</p>
+        </div>
+        
+        <div class="project">
+            <h3>Data Analysis & SQL Project <i class="fas fa-database"></i></h3>
+            <p>Used SQL for complex data analysis, increased customer spending by 12%, built a Python feedback pipeline, and ensured data integrity.</p>
+        </div>
+        
+        <div class="project">
+            <h3>Faceguard - Facial Detection & Recognition <i class="fas fa-user-shield"></i></h3>
+            <p>Implemented facial recognition using machine learning for secure and accurate authentication across diverse use cases.</p>
+        </div>
+        
+    </section>
+
+    <section id="skills" aria-labelledby="skills-heading">
+    <h2 id="skills-heading">Skills</h2>
+    <div class="skills-grid" role="list">
+            <div role="listitem"><i class="fas fa-code" aria-hidden="true"></i> Python, TensorFlow, Keras</div>
+            <div role="listitem"><i class="fas fa-database" aria-hidden="true"></i> SQL and Data Analysis</div>
+            <div role="listitem"><i class="fas fa-chart-line" aria-hidden="true"></i> Data Visualization (Tableau, Power BI, Matplotlib, Seaborn)</div>
+            <div role="listitem"><i class="fas fa-lock" aria-hidden="true"></i> Data Encryption & Secure Communication</div>
+            <div role="listitem"><i class="fas fa-microchip" aria-hidden="true"></i> Embedded Systems (ESP32, BLE, WiFi Communication)</div>
+            <div role="listitem"><i class="fab fa-bluetooth-b" aria-hidden="true"></i> BLE and Bluetooth Communication</div>
+            <div role="listitem"><i class="fas fa-brain" aria-hidden="true"></i> Neural Networks (LSTM, CNN)</div>
+            <div role="listitem"><i class="fas fa-chart-bar" aria-hidden="true"></i> Linear and Multiple Regression Analysis</div>
+            <div role="listitem"><i class="fas fa-smile" aria-hidden="true"></i> Transfer Learning, MobileNetV2, Model Fine-tuning</div>
+            <div role="listitem"><i class="fas fa-comments" aria-hidden="true"></i> NLP (NLTK)</div>
+            <div role="listitem"><i class="fas fa-exchange-alt" aria-hidden="true"></i> JSON Handling, HTTP POST Requests</div>
+            <div role="listitem"><i class="fas fa-user-shield" aria-hidden="true"></i> Facial Recognition and Secure Authentication</div>
+        </div>
+    </section>
+    
+    <section id="resources" aria-labelledby="resources-heading">
+        <h2 id="resources-heading">Additional Resources</h2>
+        <div class="resource-links">
+            <a href="Docs/Resume latest.pdf" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-file-pdf" aria-hidden="true"></i> Resume
+            </a>
+            <a href="https://www.linkedin.com/in/raj-varshith-reddy-malgireddy-/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+            </a>
+            <a href="https://github.com/rvreddy24" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-github" aria-hidden="true"></i> GitHub
+            </a>
+        </div>
+    </section>
+    </main>
+
+    <footer role="contentinfo" class="fixed-footer">
+        <p>© 2024 Raj Varshith Reddy MalgiReddy</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

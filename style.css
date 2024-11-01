@@ -1,0 +1,262 @@
+/* Reset and Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: #f0f4f8;
+    line-height: 1.6;
+    margin: 0; /* Remove default margin */
+}
+
+header {
+    background: linear-gradient(135deg, #0073e6, #005bb5);
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid #fff;
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 0.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: #0073e6;
+    border-radius: 5px;
+}
+
+section {
+    background: #fff; /* Optional */
+    padding: 2rem; /* Add padding for content */
+    margin-top: 20px; /* Adds space between sections */
+    position: relative; /* Ensure positioning context */
+    max-width: 900px;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #005bb5;
+    font-size: 1.8rem;
+}
+
+.project-details {
+    display: none;
+    background: #f0f8ff;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border-left: 4px solid #0073e6;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.styled-button {
+    display: inline-block; /* Ensure buttons are inline */
+    margin: 10px; /* Space between buttons */
+    padding: 0.6rem 1.8rem; /* Button padding */
+    background: linear-gradient(135deg, #0073e6, #00c6ff);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none; /* Remove underline */
+    transition: background 0.3s ease; /* Smooth background transition */
+}
+
+.styled-button:hover {
+    background: linear-gradient(135deg, #00c6ff, #0073e6); /* Change background on hover */
+}
+
+.styled-button i {
+    transition: transform 0.3s ease;
+}
+
+.styled-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 115, 230, 0.3);
+}
+
+.styled-button:hover i {
+    transform: rotate(90deg);
+}
+
+.styled-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 115, 230, 0.2);
+}
+
+main {
+    margin-top: 350px; /* Increased from previous value to create more space */
+    margin-bottom: 60px; /* Add space for footer */
+}
+
+.fixed-footer {
+    background: linear-gradient(135deg, #0073e6, #005bb5);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    margin-top: 20px; /* Add space above the footer */
+}
+
+#about {
+    padding-top: 33px; /* Adjust this value based on your header height */
+    background: #fff; /* Optional */
+}
+
+#skills {
+    margin-bottom: 2rem; /* Add space after skills section */
+    padding: 2rem;
+}
+
+#resources {
+    margin-bottom: 60px; /* Add space below the resources section */
+    padding: 2rem; /* Optional: Add padding for content */
+}
+
+.resource-links {
+    margin-top: 1rem;
+}
+
+.resource-links a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #0073e6;
+    transition: color 0.3s ease;
+}
+
+/* Logo colors */
+.resource-links a .fa-file-pdf {
+    color: #FF0000;  /* Red color for PDF */
+}
+
+.resource-links a .fa-linkedin {
+    color: #0077B5;  /* LinkedIn blue */
+}
+
+.resource-links a .fa-github {
+    color: #171515;  /* GitHub dark gray */
+}
+
+/* Hover effects */
+.resource-links a:hover {
+    opacity: 0.8;
+}
+
+.resource-links a i {
+    margin-right: 0.5rem;
+}
+
+/* Project icon colors */
+.project .fa-thermometer-half {
+    color: #FF4B4B;  /* Red for temperature */
+}
+
+.project .fa-bluetooth-b {
+    color: #0082FC;  /* Bluetooth blue */
+}
+
+.project .fa-cloud-upload-alt {
+    color: #00A6FF;  /* Cloud blue */
+}
+
+.project .fa-heartbeat {
+    color: #FF4B4B;  /* Medical red */
+}
+
+.project .fa-chart-line {
+    color: #2ECC71;  /* Green for analytics */
+}
+
+.project .fa-comments {
+    color: #F1C40F;  /* Yellow for communication */
+}
+
+.project .fa-smile {
+    color: #FFB900;  /* Yellow for emotion */
+}
+
+.project .fa-chart-bar {
+    color: #3498DB;  /* Blue for data viz */
+}
+
+.project .fa-database {
+    color: #9B59B6;  /* Purple for database */
+}
+
+.project .fa-user-shield {
+    color: #34495E;  /* Dark blue for security */
+}
+
+/* Add hover effect */
+.project i:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.project {
+    margin-bottom: 2rem;  /* Adds space between projects */
+    padding: 1.5rem;      /* Adds internal padding */
+    background: #ffffff;   /* Optional: adds a white background */
+    border-radius: 8px;   /* Optional: adds rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);  /* Optional: adds subtle shadow */
+}
+
+.project:last-child {
+    margin-bottom: 0;  /* Removes margin from last project */
+}
+
+.project h3 {
+    margin-bottom: 1rem;  /* Adds space between title and description */
+}
+
+.project p {
+    margin-bottom: 1rem;  /* Adds space between description and button */
+}
+
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+    scroll-padding-top: 280px; /* Adjust this value based on your header height */
+}
+
